@@ -33,9 +33,9 @@ function encriptarTexto(texto) {
 // Función para desncriptar un Texto
 function desencriptarTexto(texto){
   const desencriptaciones = {
+    'ai': 'a',
     'enter': 'e',
     'imes': 'i',
-    'ai': 'a',
     'ober': 'o',
     'ufat': 'u'
   };
