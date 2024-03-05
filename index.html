@@ -1,0 +1,55 @@
+<!Doctype html>
+<html>
+  <head lang = "es">
+    <meta charset = "UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Encriptador</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+  </head>
+  <body>
+
+    <header>
+      <img src="imagenes_figma/Logo.png" alt="Logo de Alura">
+      <h1>Encriptador de texto</h1>      
+    </header>
+    <main>
+      <div class="contenedor_principal"> 
+        <div class="contenedor_entradas">
+          <textarea  id="textoUsuario" class="container__input" placeholder="Ingrese el texto aquí"></textarea> 
+          <div class="contenedor_opciones">                      
+            <p>
+              <img class="circulo_exclamacion" src="imagenes_figma/exclamation-circle-svgrepo-com.svg" alt="!">
+              Solo letras minúsculas y sin acentos
+            </p>
+            <div>
+              <button id="boton_encriptado" class="container__boton" onclick="botonEncriptar();" >Encriptar</button> 
+              <button class="container__boton" onclick="botonDesencriptar();">Desencriptar</button>   
+            </div>
+          </div>          
+        </div>
+        <div class="contenedor_salida">
+          <textarea id="texto_generado" readonly>Ingresa el texto que desees encriptar o desencriptar.</textarea>
+          <div id="salida_inicial">
+            <img class="muneco" src="imagenes_figma/Muñeco.png" alt="Imagen de busqueda">
+            <p>Ningún mensaje fue encontrado</p>
+            <p>Ingresa el texto que desees encriptar o desencriptar.</p>
+          </div>
+          <button id="boton_copiar" class="container__boton" onclick="copiarTextoGenerado()">Copiar</button>
+        </div>
+      </div>
+      
+    </main>
+    
+    <footer>
+      <a href="https://github.com/user-name-c">
+        <img class="github-logo" src="imagenes_figma/github-logo.png" alt="github-logo">
+      </a>
+      <p>2024 Juan Ivan Napoles Valenzuela</p>
+    </footer>
+
+    <script src="app.js" defer></script>
+
+  </body>
+</html>

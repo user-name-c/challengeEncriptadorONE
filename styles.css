@@ -1,0 +1,236 @@
+body{
+    display: flex;
+    flex-direction: column;
+    background: #EFF1FA;
+    width: 100%;
+    height: 100vh;
+    box-sizing: border-box;
+}
+
+header{
+    /* Logo */
+    /* Auto layout */
+    display: flex;
+    padding: 0px 10%;
+
+    width: 100%;
+    height: 48px;
+    box-sizing: border-box;
+}
+
+header img{
+    width: 120px;
+    height: 48px;
+}
+
+main{
+    height: inherit;
+}
+
+.contenedor_principal{
+    display: flex;
+    width: 100%;
+    height: 90%;
+    padding: 0 10%;
+    box-sizing: border-box;
+}
+
+.contenedor_entradas{
+    display: flex;
+    flex-direction: column;
+    height:100%;
+    width: 70%;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+#textoUsuario{
+    border: none;
+    background-color: transparent;
+    resize: none; 
+    width: 80%; 
+    height: 70%; 
+    padding: 10px; 
+    outline: none; 
+    margin: 2em 0;
+    /*Fuente*/
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 150%;
+    color: #0A3871;
+}
+
+.contenedor_opciones{
+    margin-top: auto;
+    width: 80%; 
+}
+
+.contenedor_opciones p{
+    display: flex;
+    gap: 5px;
+    margin: 0 24px 1em 35px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    color: #495057;
+    opacity: 0.8;
+}
+
+.circulo_exclamacion{
+    width: 16px;
+    height: 16px;
+}
+
+.container__boton{
+    border-radius: 24px;
+    width: 328px;
+    height: 67px;
+    border: 1px solid #0A3871;
+    margin: 0 24px 24px 24px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+    color: #0A3871;
+    background: none;
+    cursor: pointer;
+    transition:all 500ms ease;
+}
+
+.container__boton:hover{
+    background: #0A3871;
+    color: white;
+}
+
+.container__boton:first-child{
+    /* Dark blue/dark-blue-300 */
+    background: #0A3871;
+    color: white;
+}
+
+.contenedor_salida{
+    /*flex box*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    /* Rectangle 1 */
+    margin-left: auto;
+    margin-top: auto;
+
+    
+    width: 400px;
+    height: 100%;
+    box-sizing: border-box;
+    
+
+    /* White */
+    background: #FFFFFF;
+    /* shadow */
+    box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
+    border-radius: 32px;
+}
+
+#salida_inicial{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contenedor_salida p{
+    color: #495057;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 400;
+    margin: 1em 1em 1em 1em;
+}
+
+.contenedor_salida p:first-of-type{
+    color: #343A40;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+#texto_generado{
+    border: none;
+    background-color: transparent;
+    resize: none; 
+    outline: none; 
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 150%;
+    color: #495057;
+    margin-left: 1em;
+    margin-right: 1em;
+    margin-top: 1em;
+    display: none;
+    width: 90%;
+    height: 80%;
+    box-sizing: border-box;
+}
+
+.contenedor_salida button{
+    margin-top: auto;
+    display: none;
+}
+
+footer{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: center;
+    background: #0A3871;
+    color: white;
+    height: 30px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+}
+
+.github-logo{
+    height: 20px;
+}
+
+@media screen and (max-width: 768px){
+    header{
+        padding: 0px
+    }
+    .contenedor_principal{
+        flex-direction: column;
+        padding: 0 5%;
+    }
+    .contenedor_entradas{
+        width: 100%;
+    }
+    #textoUsuario{
+        width: 100%;
+    }
+    .contenedor_opciones{
+        width: 100%;
+    }
+    .contenedor_opciones p{
+        margin: 0 0 1em 0;
+    }
+    .muneco {
+        display: none;
+    }
+    .container__boton{
+        margin: 0 0px 24px 0px;
+    }
+    .contenedor_salida{
+        width: 100%;
+    }
+    .contenedor_salida button{
+        width: 80%;
+    }
+}
