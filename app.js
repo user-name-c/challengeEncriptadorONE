@@ -91,6 +91,12 @@ function mostrarTextoSalida(){
   document.getElementById('boton_copiar').style.display = 'block';
 }
 
+//Funcion auxiliar para imprimir mensaje de alerta
+function ingreseSoloMinusculas(){
+  document.getElementById('boton_copiar').style.display = 'none';
+  asignarTextoId('texto_generado','Ingrese solo letras minusculas, sin caracteres especiales');
+}
+
 // Funcion para el boton encriptar texto
 function botonEncriptar(){
   const textoOriginal = document.getElementById('textoUsuario').value;
@@ -100,7 +106,7 @@ function botonEncriptar(){
     asignarTextoId('texto_generado',textoGenerado);
     mostrarTextoSalida();
   } else {
-    asignarTextoId('texto_generado','Ingrese solo letras minusculas, sin caracteres especiales');
+    ingreseSoloMinusculas();
   }
 
   console.log("Texto original:", textoOriginal);
@@ -112,7 +118,7 @@ function botonDesencriptar(){
   const textoOriginal = document.getElementById('textoUsuario').value;
 
   if (noEsMinusculaNiEspacio(textoOriginal)) {
-    asignarTextoId('texto_generado','Ingrese solo letras minusculas, sin caracteres especiales');
+    ingreseSoloMinusculas();
   } else {
     let textoGenerado = desencriptarTexto(textoOriginal);
     asignarTextoId('texto_generado',textoGenerado);
