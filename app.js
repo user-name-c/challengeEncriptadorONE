@@ -93,8 +93,9 @@ function mostrarTextoSalida(){
 
 //Funcion auxiliar para imprimir mensaje de alerta
 function ingreseSoloMinusculas(){
+  document.getElementById('salida_inicial').style.display = 'block';
+  document.getElementById('texto_generado').style.display = 'none';
   document.getElementById('boton_copiar').style.display = 'none';
-  asignarTextoId('texto_generado','Ingrese solo letras minusculas, sin caracteres especiales');
 }
 
 // Funcion para el boton encriptar texto
