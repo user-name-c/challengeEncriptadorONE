@@ -86,9 +86,15 @@ main{
     height: 16px;
 }
 
+.contenedor_botones{
+    display: flex;
+    justify-content: center;
+}
+
 .container__boton{
     border-radius: 24px;
-    width: 328px;
+    width: 40%;
+    max-width: 328px;
     height: 67px;
     border: 1px solid #0A3871;
     margin: 0 24px 24px 24px;
@@ -113,6 +119,11 @@ main{
     /* Dark blue/dark-blue-300 */
     background: #0A3871;
     color: white;
+    opacity: 0.9;
+}
+
+.container__boton:first-child:hover{
+    opacity: 1;
 }
 
 .contenedor_salida{
@@ -181,6 +192,7 @@ main{
 }
 
 .contenedor_salida button{
+    width: 80%;
     margin-top: auto;
     display: none;
 }
@@ -204,7 +216,7 @@ footer{
     height: 20px;
 }
 
-@media screen and (max-width: 768px){
+@media screen and (max-width: 960px){
     header{
         padding: 0px
     }
@@ -232,6 +244,11 @@ footer{
     .muneco {
         display: none;
     }
+
+    .contenedor_botones{
+        gap: 5px;
+    }
+
     .container__boton{
         margin: 0 0px 24px 0px;
         width: 40%;
