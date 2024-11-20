@@ -101,7 +101,8 @@ function ingreseSoloMinusculas(){
 // Funcion para el boton encriptar texto
 function botonEncriptar(){
   const textoOriginal = document.getElementById('textoUsuario').value;
-  let textoGenerado = encriptarTexto(textoOriginal);
+  let textoEncriptado = encriptarTexto(textoOriginal);
+  let textoGenerado = invertirTexto(textoEncriptado);
 
   if (textoGenerado) {
     asignarTextoId('texto_generado',textoGenerado);
@@ -121,13 +122,14 @@ function botonDesencriptar(){
   if (noEsMinusculaNiEspacio(textoOriginal)) {
     ingreseSoloMinusculas();
   } else {
-    let textoGenerado = desencriptarTexto(textoOriginal);
+    let textoDesinvertido = invertirTexto(textoOriginal)
+    let textoGenerado = desencriptarTexto(textoDesinvertido);
     asignarTextoId('texto_generado',textoGenerado);
     mostrarTextoSalida();
+    console.log("Texto desencriptado:", textoGenerado);
   }
 
   console.log("Texto original:", textoOriginal);
-  console.log("Texto desencriptado:", textoGenerado);
 }
 
 // Función para el boton copiar texto
@@ -135,7 +137,7 @@ function copiarTextoGenerado(){
   copiarContenido("texto_generado")
 }
 
-
-
-
-  
+function invertirTexto(texto){
+  let textoInvertido = texto.split("").reverse().join("");
+  return textoInvertido;
+}
