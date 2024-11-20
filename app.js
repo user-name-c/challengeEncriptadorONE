@@ -104,6 +104,7 @@ function botonEncriptar(){
   let textoGenerado = encriptarTexto(textoOriginal);
 
   if (textoGenerado) {
+    textoGenerado = invertirTexto(textoGenerado);
     asignarTextoId('texto_generado',textoGenerado);
     mostrarTextoSalida();
   } else {
@@ -117,11 +118,11 @@ function botonEncriptar(){
 // Funcion para el boton desencriptar texto
 function botonDesencriptar(){
   const textoOriginal = document.getElementById('textoUsuario').value;
-
   if (noEsMinusculaNiEspacio(textoOriginal)) {
     ingreseSoloMinusculas();
   } else {
-    let textoGenerado = desencriptarTexto(textoOriginal);
+    let textoInvertido = invertirTexto(textoOriginal);
+    let textoGenerado = desencriptarTexto(textoInvertido);
     asignarTextoId('texto_generado',textoGenerado);
     mostrarTextoSalida();
   }
@@ -133,6 +134,12 @@ function botonDesencriptar(){
 // Función para el boton copiar texto
 function copiarTextoGenerado(){
   copiarContenido("texto_generado")
+}
+
+// Invertimos el texto
+function invertirTexto(texto){
+    let textoInvertido = texto.split("").reverse().join("");
+    return textoInvertido;
 }
 
 
